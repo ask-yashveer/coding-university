@@ -1,0 +1,231 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-company-red static-top">
+  <div class="container">
+    <div class="navbar" id="nav-tab" role="tablist">
+      <a href="#" class="navbar-brand">
+        <img src="../assets/images/logo1.png" height="100" width="100" alt="">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="nav-tab">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" style="color: turquoise">
+          <a [routerLink]="['/home']" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/about-us']" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/contact-us']" class="nav-link">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a [routerLink]="['/register']" class="nav-link">Register</a>
+        </li> -->
+        <li class="nav-item">
+          <a [routerLink]="['/candidate-login']" class="nav-link" *ngIf="!(authService.loggedIn())">Student Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <ul class="nav navbar-default navbar-nav navbar-right">
+            <li><a [routerLink]="['/login']"><button class="btn btn-info">Login</button></a></li>
+        </ul> -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand">Start Bootstrap</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" >Sample Post</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!--row2 complete-->
+  <br />
+  <br />
+  <!-- <footer>
+    <div class="row">
+      <div class="col-md-8 col-lg-8">
+        <p>
+          <strong>
+
+            &copy;{{todaysDate | date:'yyyy'}} Coding University,Inc. All right reserved.
+
+          </strong>
+        </p>
+
+      </div>
+    </div>
+  </footer> -->
+  <footer class="page-footer font-small pt-4" style="background-color:#FFEBCD">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><a href="#" class="navbar-brand">
+            <img src="../assets/images/logo1.png" height="100" width="100" alt="">
+          </a></h5>
+          <p>
+              We strive for teaching most up-to-date programming technologies. Our dynamic curriculum has been designed and refined by our founding members-a team of seasoned software developers and tech executives.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">News</a>
+            </li>
+            <li>
+              <a href="#!">Our team</a>
+            </li>
+            <li>
+              <a href="#!">Careers</a>
+            </li>
+            <li>
+              <a href="#!">Internships</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">COMMUNITY</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Learners</a>
+            </li>
+            <li>
+              <a href="#!">Partners</a>
+            </li>
+            <li>
+              <a href="#!">Developers</a>
+            </li>
+            <li>
+              <a href="#!">Translators</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">MORE</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Terms</a>
+            </li>
+            <li>
+              <a href="#!">Privacy</a>
+            </li>
+            <li>
+              <a href="/register">Register</a>
+            </li>
+            <li>
+              <a href="/login">Admin Controls</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fa fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fa fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fa fa-google-plus"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fa fa-linkedin"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fa fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">        
+      <p>
+      <strong>
+
+        &copy;{{todaysDate | date:'yyyy'}} Coding University, Inc. All right reserved.
+
+      </strong>
+      
+    </p>
+    <div class="text-center"><strong>{{ todaysDate | date:'medium' }}</strong></div>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->

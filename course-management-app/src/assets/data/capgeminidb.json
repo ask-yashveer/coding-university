@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 7,
+      "firstName": "Ankita",
+      "lastName": "Mehrotra",
+      "age": 23,
+      "mobileNumber": "8899654751",
+      "email": "ankita.mehrotra@gmail.com",
+      "courseId": "CU1003",
+      "password": "123456"
+    },
+    {
+      "id": 8,
+      "firstName": "Shweta",
+      "lastName": "Singh",
+      "age": 24,
+      "mobileNumber": "9895421541",
+      "courseId": "CU1001",
+      "email": "shweta.singh@gmail.com",
+      "password": "123456213"
+    },
+    {
+      "id": 9,
+      "firstName": "Abhishek",
+      "lastName": "Singh",
+      "age": 23,
+      "mobileNumber": "8896389453",
+      "courseId": "CU1002",
+      "email": "abhishek.singh@gmail.com",
+      "password": "12345632"
+    },
+    {
+      "id": 10,
+      "firstName": "Vishal",
+      "lastName": "Sharma",
+      "age": 22,
+      "mobileNumber": "7512648795",
+      "courseId": "CU1004",
+      "email": "vishal.sharma@gmail.com",
+      "password": "123456323"
+    },
+    {
+      "id": 11,
+      "firstName": "Vivek",
+      "lastName": "Gangwar",
+      "age": 22,
+      "mobileNumber": "9885512455",
+      "courseId": "CU1005",
+      "email": "vivek.gangwar@gmail.com",
+      "password": "123456213"
+    }
+  ]
+}

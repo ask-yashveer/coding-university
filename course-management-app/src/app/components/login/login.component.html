@@ -1,0 +1,90 @@
+<style>
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus {
+        background-color: #CD5C5C;
+        border-color: #F0F8FF;
+    }
+    .btn-success,
+    .btn-success:hover,
+    .btn-success:active,
+    .btn-success:visited,
+    .btn-success:focus {
+        background-color: #CD5C5C;
+        border-color: #F0F8FF;
+    }
+
+    .btn-danger,
+    .btn-danger:hover,
+    .btn-danger:active,
+    .btn-danger:visited,
+    .btn-danger:focus {
+        background-color: #CD5C5C;
+        border-color: #F0F8FF;
+    }
+    
+
+</style>
+<br>
+<br>
+<div class="container">
+    <h3 class="text-center">Login</h3>
+    <br>
+    <br>
+    <!--Reactive Forms Model Driven Forms-->
+    <!--Design Login Form-->
+    <!--[formGroup] - Property Binding-->
+    <!--(ngSubmit) - Event Binding-->
+    <div class="offset-lg-2 col-lg-8 col-md-8">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <div class="form-group row">
+                <label class="col-lg-3 text-right col-sm-2 font-weight-bold" for="email">Email Address:</label>
+                <div class="col-sm-7 col-lg-7">
+                    <input type="email" class="form-control" formControlName="email" id="email" />
+                    <!--*ngIf, *ngFor, *ngSwitchCase as STRUCTURAL DIRECTIVES-->
+                    <div *ngIf="submitted && loginForm.controls.email.errors" class="error">
+                        <div class="text-danger" *ngIf="loginForm.controls.email.errors.required">Email is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of email text box-->
+
+            <div class="form-group row">
+                <label class="col-lg-3 text-right col-sm-2 font-weight-bold" for="password">Password:</label>
+                <div class="col-sm-7 col-lg-7  ">
+                    <input type="password" class="form-control" formControlName="password" id="password" />
+                    <div *ngIf="submitted && loginForm.controls.password.errors" class="error">
+                        <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is
+                            required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of password text box-->
+            <br>
+            <br>
+            <div class="text-center form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn  btn-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- <button class="btn btn-danger" type="reset">Cancel</button>&nbsp; -->
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div *ngIf="invaildLogin" class="error">
+                    <div class="text-danger">
+                        Invaild Credentials
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>

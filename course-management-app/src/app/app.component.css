@@ -1,0 +1,82 @@
+p {
+    font-weight: 200;
+    font-size: 13px;
+  }
+
+  h6 {
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  h2 {
+    font-family: -apple-system-headline, BlinkMacSystemFont, sans-serif;
+  }
+
+  .bg-company-red {
+    background-color: rgb(255, 235, 205) !important;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: rgb(207, 97, 54);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .nav-link {
+    color: #f30cae;
+    border-color: transparent #FFF0F5;
+    margin-right: 1.5em;
+    /* border-bottom: 3px solid !important; */
+    font-size: 30px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    /* color: rgb(0, 0, 0); */
+    font-size: 20px;
+  }

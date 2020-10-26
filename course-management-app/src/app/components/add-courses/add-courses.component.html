@@ -1,0 +1,109 @@
+<br />
+<br />
+<div class="col-md-12">
+    <h3 class="display-4 text-center">
+        Add Course
+    </h3>
+    <br />
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <!--Start of first name text box-->
+        <div class="form-group row">
+            <label class="col-lg-3 text-right col-sm-2 font-weight-bold" for="courseId" > Course Id: </label>
+            <div class="col-sm-6 col-lg-6">
+                <input type="text" class="form-control" formControlName="courseId" id="courseId" autocomplete="off"/>
+                <div *ngIf="submitted && addForm.controls.courseId.errors" class="error">
+                    <div class="text-danger" *ngIf="addForm.controls.courseId.errors.required">
+                        Course Id is Required
+                    </div>
+                    <div class="text-danger" *ngIf="addForm.controls.courseId.errors.pattern">
+                        Course Id Must Begin with string "CU" and must be of 6 characters. For example "CU1001"
+                    </div>
+                    
+                </div>
+                <div *ngFor="let co of course">
+                    <div *ngIf="co.courseId == addForm.controls.courseId.value" class="text-danger">
+                        This course ID already exists. Enter unique ID.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of first name text box-->
+
+        <!--Start of last name text box-->
+        <div class="form-group row">
+            <label class="col-lg-3 text-right col-sm-2 font-weight-bold" for="courseName"> Course Name: </label>
+            <div class="col-sm-6 col-lg-6">
+                <input type="text" class="form-control" formControlName="courseName" id="courseName" />
+                <div *ngIf="submitted && addForm.controls.courseName.errors" class="error">
+                    <div class="text-danger" *ngIf="addForm.controls.courseName.errors.required">
+                        Course Name is Required
+                    </div>
+                </div>
+                <div *ngFor="let courses of course">
+                    <div *ngIf="courses.courseName == addForm.controls.courseName.value" class="text-danger">
+                        This name already exists. Enter unique course name.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of last name text box-->
+
+        <!--Start of age text box-->
+        <div class="form-group row">
+            <label class="col-lg-3 text-right col-sm-2 font-weight-bold" for="courseDuration"> Course Duration (Hours):
+            </label>
+            <div class="col-sm-2 col-lg-2">
+                <input type="number" class="form-control" formControlName="courseDuration" id="courseDuration" />
+                <div *ngIf="submitted && addForm.controls.courseDuration.errors" class="error">
+                    <div class="text-danger" *ngIf="addForm.controls.courseDuration.errors.required">
+                        Course Duration is Required
+                    </div>
+                    <!-- <div class="text-danger"
+                        *ngIf="addForm.controls.age.errors.min || addForm.controls.age.errors.max">
+                        Age must be between 20 and 30
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!--End of age text box-->
+
+        <!--Start of mobile number text box-->
+        <div class="form-group row">
+            <label class="col-lg-3 text-right col-sm-2 font-weight-bold" for="courseFee"> Course Fee: </label>
+            <div class="col-sm-3 col-lg-3">
+                <input type="text" class="form-control" formControlName="courseFee" id="courseFee" />
+                <div *ngIf="submitted && addForm.controls.courseFee.errors" class="error">
+                    <div class="text-danger" *ngIf="addForm.controls.courseFee.errors.required">
+                        Course Fees is required
+                    </div>
+                    <!-- <div class="text-danger" *ngIf="addForm.controls.courseFee.errors.pattern">
+                        Mobile Number must of 10 digit and should be number
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="offset-lg-4 ">
+            <nav class="navbar navbar-expand-sm navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="m-1 btn btn-success">Add
+                            Course</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li class="nav-item">
+                        <a class="m-1 btn btn-warning" [routerLink]="['/list-courses']">Back to List</a>
+                        <!-- <button (click)="logOutUser()" class="m-1 btn btn-light btn-outline-danger" Button label="DepScreen">Log Off</button> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--End of password text box-->
+        <!-- <button class="btn btn-success">Update</button>&nbsp; -->
+        <!-- <a class="btn btn-warning" [routerLink]="['/list-user']">Back to List</a> -->
+        <br />
+        <br />
+    </form>
+</div>

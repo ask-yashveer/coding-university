@@ -1,0 +1,36 @@
+<br>
+<div>
+  <h2 class="display-4 text-center">My Details</h2>
+  <br>
+  <div class="text-center"><button (click)="logout()" [routerLink]="['/home']" class="btn btn-danger">Logout</button>
+  </div>
+  <br />
+  <br />
+  <div class="row">
+    <div class="offset-lg-3 col-md-6 col-lg-6 col-sm-1">
+      <ul class="list-group">
+        <li class="list-group-item">Name:&nbsp;{{User.firstName}}&nbsp;{{User.lastName}}</li>
+        <li class="list-group-item">Email:&nbsp;{{User.email}}</li>
+        <li class="list-group-item">Age:&nbsp;{{User.age}}</li>
+        <li class="list-group-item">Mobile Number:&nbsp;{{User.mobileNumber}}</li>
+      </ul>
+      <br>
+      <h4 class="display-4 text-center">Enrolled Courses</h4>
+      <table class="table table-hover table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Duration</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of enrolledCourses">
+            <td>{{item.courseName}}</td>
+            <td>{{item.courseDuration}} hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="text-center">
+  <!-- <button type="button" class="btn btn-warning" (click)=downloadPDF()>Print</button> -->
+</div>
+</div>
